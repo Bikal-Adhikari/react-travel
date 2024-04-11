@@ -1,23 +1,12 @@
 import "./App.css";
+import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <>
       <Navbar />
-
-      <section className="hero" id="home">
-        <div className="hero-banner">
-          <h1>continue exploring</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
-            explicabo debitis est autem dicta.
-          </p>
-          <a href="#tours" className="btn hero-btn">
-            explore tours
-          </a>
-        </div>
-      </section>
+      <Hero />
 
       <section className="section" id="about">
         <div className="section-title">
