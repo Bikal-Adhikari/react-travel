@@ -5,15 +5,27 @@ import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import Services from "./components/Services";
 import Tours from "./components/Tours";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <>
       <Navbar />
-      <Hero />
-      <About />
-      <Services />
-      <Tours />
+      <Router>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <Hero />
+                <About />
+                <Services />
+                <Tours />
+              </>
+            }
+          ></Route>
+        </Routes>
+      </Router>
       <Footer />
     </>
   );
