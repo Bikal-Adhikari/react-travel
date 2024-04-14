@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "../assets/logo.svg";
-import { pageLinks, socialLinks } from "../data";
+import { socialLinks } from "../data";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -14,15 +15,26 @@ const Navbar = () => {
         </div>
 
         <ul className="nav-links" id="nav-links">
-          {pageLinks.map((link) => {
-            return (
-              <li key={link.id}>
-                <a href={link.href} className="nav-link">
-                  {link.text}
-                </a>
-              </li>
-            );
-          })}
+          <li>
+            <Link to="/" >
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link to="/about" >
+              About
+            </Link>
+          </li>
+          <li>
+            <Link to="/services" >
+              Services
+            </Link>
+          </li>
+          <li>
+            <Link to="/tours" >
+              Tours
+            </Link>
+          </li>
         </ul>
 
         <ul className="nav-icons">
