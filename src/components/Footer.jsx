@@ -1,4 +1,3 @@
-import React from "react";
 import { pageLinks, socialLinks } from "../data";
 
 const Footer = () => {
@@ -32,8 +31,10 @@ const Footer = () => {
         })}
       </ul>
       <p className="copyright">
-        copyright &copy; Backroads travel tours company
-        <span id="date">{new Date().getFullYear()}</span> all rights reserved
+        copyright &copy; Tour Travel company
+        <span id="date">{new Date().getFullYear()}</span> all rights reserved ||
+        made with ❤️ by{" "}
+        <a href="https://www.linkedin.com/in/bikal-adhikari/">Bikal</a>
       </p>
     </footer>
   );

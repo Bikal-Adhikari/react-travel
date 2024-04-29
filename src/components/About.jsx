@@ -1,4 +1,3 @@
-import React from "react";
 import aboutImg from "../assets/about.jpeg";
 import Title from "./Title";
 

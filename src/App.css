@@ -363,7 +363,7 @@ p {
 }
 
 .footer {
-  background: var(--clr-grey-1);
+  background: black;
   text-align: center;
   padding-left: 2rem;
   padding-right: 2rem;
