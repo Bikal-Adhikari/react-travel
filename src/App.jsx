@@ -11,7 +11,7 @@ import { getData } from "./helpers/axiosHelper";
 
 const initialToursState = [];
 function App() {
-  const [data, setData] = useState(initialToursState);
+  const [datas, setData] = useState(initialToursState);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -32,7 +32,7 @@ function App() {
         <Route path="/" element={<Hero />} />
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
-        <Route path="/tours" element={<Tours data={data} />} />
+        <Route path="/tours" element={<Tours datas={datas} />} />
       </Routes>
 
       <Footer />

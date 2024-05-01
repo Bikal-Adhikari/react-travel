@@ -1,13 +1,13 @@
 import Title from "./Title";
 
-const Tours = ({ data }) => {
+const Tours = ({ datas }) => {
   return (
     <section className="section" id="tours">
       <Title title=" featured " subTitle="tours" />
 
       <div className="section-center featured-center">
-        {data &&
-          data?.map((tour) => {
+        {datas &&
+          datas?.map((tour) => {
             const {
               _id,
               name,
