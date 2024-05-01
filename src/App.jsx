@@ -9,16 +9,7 @@ import Tours from "./components/Tours";
 import { Routes, Route } from "react-router-dom";
 import { getData } from "./helpers/axiosHelper";
 
-const initialToursState = {
-  id: "",
-  name: "",
-  info: "",
-  image: "",
-  price: "",
-  duration: "",
-  highlights: [],
-  includes: [],
-};
+const initialToursState = [];
 function App() {
   const [data, setData] = useState(initialToursState);
 

@@ -1,40 +1,48 @@
 import Title from "./Title";
 
-
 const Tours = ({ data }) => {
   return (
     <section className="section" id="tours">
       <Title title=" featured " subTitle="tours" />
 
       <div className="section-center featured-center">
-        {data?.map((tour) => {
-          const { id, image, date, title, info, location, duration, cost } =
-            tour;
-          return (
-            <article className="tour-card" key={id}>
-              <div className="tour-img-container">
-                <img src={image} className="tour-img" alt="" />
-                <p className="tour-date">{date}</p>
-              </div>
-              <div className="tour-info">
-                <div className="tour-title">
-                  <h4>{title}</h4>
+        {data &&
+          data?.map((tour) => {
+            const {
+              _id,
+              name,
+              info,
+              image,
+              price,
+              duration,
+              highlights,
+              includes,
+            } = tour;
+            return (
+              <article className="tour-card" key={_id}>
+                <div className="tour-img-container">
+                  <img src={image} className="tour-img" alt="" />
+                  <p className="tour-date">{name}</p>
                 </div>
-                <p>{info}</p>
-                <div className="tour-footer">
-                  <p>
-                    <span>
-                      <i className="fas fa-map"></i>
-                    </span>
-                    {location}
-                  </p>
-                  <p>{duration} days</p>
-                  <p>from ${cost}</p>
+                <div className="tour-info">
+                  <div className="tour-title">
+                    <h4>{info}</h4>
+                  </div>
+                  <p>{price}</p>
+                  <div className="tour-footer">
+                    <p>
+                      <span>
+                        <i className="fas fa-map"></i>
+                      </span>
+                      {highlights}
+                    </p>
+                    <p>{duration} days</p>
+                    <p>from ${includes}</p>
+                  </div>
                 </div>
-              </div>
-            </article>
-          );
-        })}
+              </article>
+            );
+          })}
       </div>
     </section>
   );
