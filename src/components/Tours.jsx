@@ -1,14 +1,13 @@
-import React from "react";
 import Title from "./Title";
-import { tours } from "../data";
 
-const Tours = () => {
+
+const Tours = ({ data }) => {
   return (
     <section className="section" id="tours">
       <Title title=" featured " subTitle="tours" />
 
       <div className="section-center featured-center">
-        {tours.map((tour) => {
+        {data?.map((tour) => {
           const { id, image, date, title, info, location, duration, cost } =
             tour;
           return (
